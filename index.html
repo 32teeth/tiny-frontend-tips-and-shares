@@ -64,8 +64,8 @@
     --font-weight-bolder: 700;
     --font-weight-black: 900;
 
-    --header-height: calc(170 / 16 * var(--base-size));
-    --footer-height: calc(125 / 16 * var(--base-size));
+    --header-height: calc(150 / 16 * var(--base-size));
+    --footer-height: calc(80 / 16 * var(--base-size));
     --aside-width: clamp(10vw, calc(290 / 16 * var(--base-size)), 20vw);
     --offset-width: calc(50 / 16 * var(--base-size));
 
@@ -92,13 +92,12 @@
 
   body {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     color: var(--color-gray-900);
-    background: var(--primary-tint);
     width: 100vw;
   }
 
@@ -110,8 +109,11 @@
     "gap footer aside";
     grid-template-columns: var(--offset-width) auto var(--aside-width);
     grid-template-rows: var(--header-height) auto var(--footer-height);
-    width: 100%;
-    background: var(--color-white);
+    width: calc(1080 / 16 * var(--base-size));
+    height: calc(480 / 16 * var(--base-size));
+    position: relative;
+    outline: var(--border-width) var(--border-solid) var(--color-gray-200);
+    overflow: hidden;
   }
 
   aside {
@@ -144,6 +146,7 @@
   content {
     grid-area: content;
     gap: var(--spacing-larger);
+    padding-right: var(--spacing-larger);
   }
 
   section {
@@ -169,6 +172,11 @@
 
   footer {
     grid-area: footer;
+    position: relative;
+  }
+
+  footer h3 {
+    font-size: var(--font-size-larger);
   }
 
   shield {
@@ -193,7 +201,8 @@
     align-items: center;
     color: var(--color-white);
     position: absolute;
-    left: calc(100vw - (var(--aside-width) + var(--spacing-largest) + var(--spacing-medium)));
+    right: calc(var(--spacing-large) * -2.25);
+    bottom: var(--spacing-small);
   }
 
   credits h1, credits h2 {
@@ -259,7 +268,7 @@
     </section>
   </content>
   <footer>
-    <h1>HTML | CSS | JS is the <strong>MVC</strong></h1>
+    <h3>HTML | CSS | JS is the <strong>MVC</strong></h3>
     <credits>
       <a href='https://github.com/sponsors/32teeth' target='_blank'>
         <h1>
