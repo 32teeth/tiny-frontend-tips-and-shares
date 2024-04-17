@@ -1,0 +1,244 @@
+@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined);
+@import url(https://fonts.googleapis.com/css2?family=Comfortaa&display=swap:400,100,500,300italic,500italic,700italic,900,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,500,300italic,500italic,700italic,900,300);
+
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+  --color-gray: hsl(0, 0%, 50%);
+  --color-gray-900: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 0%);
+  --color-gray-800: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 5%);
+  --color-gray-700: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 10%);
+  --color-gray-600: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 15%);
+  --color-gray-500: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 20%);
+  --color-gray-400: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 25%);
+  --color-gray-300: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 30%);
+  --color-gray-200: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 35%);
+  --color-gray-100: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 40%);
+  --color-gray-50: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 45%);
+  --color-gray-0: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 80%);
+  --color-blue: hsl(216, 89%, 49%);
+  --color-purple: hsl(260, 81%, 65%);
+  --color-pink: hsl(309, 72%, 64%);
+  --color-orange: hsl(42, 88%, 54%);
+  --color-teal: hsl(184, 96%, 45%);
+  --color-green: hsl(121, 78%, 45%);
+  --color-red: hsl(0, 92%, 51%);
+
+  --shield-color: rgba(0, 0, 0, 0.5);
+  --shield-color-html: rgb(228, 77, 38);
+  --shield-color-css: rgb(38, 77, 228);
+  --shield-color-js: rgb(240, 219, 79);
+  --shield-color-shine: rgba(255, 255, 255, 0.5);
+
+  --base-size: 1rem;
+  --spacing-smallest: calc(2 / 16 * var(--base-size));
+  --spacing-smaller: calc(var(--base-size) / 3);
+  --spacing-small: calc(var(--base-size) / 2);
+  --spacing-medium: var(--base-size);
+  --spacing-large: calc(var(--base-size) * 2);
+  --spacing-larger: calc(var(--base-size) * 3);
+  --spacing-largest: calc(var(--base-size) * 4);
+
+  --border-width: calc(1/16 * 1rem);
+  --border-solid: solid;
+  --border-dashed: dashed;
+  --border-dotted: dotted;
+
+  --font-family: 'Roboto', sans-serif;
+  --font-size: 1rem;
+  --font-size-smallest: calc(var(--font-size) / 1.5);
+  --font-size-smaller: calc(var(--font-size) / 1.25);
+  --font-size-small: calc(var(--font-size) / 1.125);
+  --font-size-medium: var(--font-size);
+  --font-size-large: calc(var(--font-size) * 1.125);
+  --font-size-larger: calc(var(--font-size) * 1.25);
+  --font-size-largest: calc(var(--font-size) * 2);
+  --line-height: 1.5;
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+  --font-weight-bolder: 700;
+  --font-weight-black: 900;
+
+  --header-height: calc(150 / 16 * var(--base-size));
+  --footer-height: calc(80 / 16 * var(--base-size));
+  --aside-width: clamp(10vw, calc(290 / 16 * var(--base-size)), 20vw);
+  --offset-width: calc(50 / 16 * var(--base-size));
+
+  --primary-tint: var(--color-blue);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: var(--font-weight-light);
+  color: var(--primary-tint);
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-largest);
+}
+
+h2 {
+  color: var(--color-gray-900);
+  font-size: var(--font-size-larger);
+}
+
+strong {
+  font-weight: var(--font-weight-medium);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--color-gray-900);
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display:grid;
+  grid-template-areas:
+  "gap header aside"
+  "gap content aside"
+  "gap footer aside";
+  grid-template-columns: var(--offset-width) auto var(--aside-width);
+  grid-template-rows: var(--header-height) auto var(--footer-height);
+  width: calc(1080 / 16 * var(--base-size));
+  height: calc(480 / 16 * var(--base-size));
+  position: relative;
+  outline: var(--border-width) var(--border-solid) var(--color-gray-200);
+  overflow: hidden;
+}
+
+aside {
+  grid-area: aside;
+  width: var(--aside-width);
+  background: url(https://raw.githubusercontent.com/32teeth/tiny-frontend-tips-and-shares/main/32teeth.png), var(--primary-tint);
+  background-size: cover;
+  background-blend-mode: luminosity;
+}
+
+header,
+content,
+footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header {
+  grid-area: header;
+  flex-direction: column;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: var(--header-height);
+  max-height: var(--header-height);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+content {
+  grid-area: content;
+  gap: var(--spacing-larger);
+  padding-right: var(--spacing-larger);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  width: 100%
+}
+
+section h2 {
+  font-size: var(--font-size-larger);
+}
+
+section big {
+  font-size: var(--font-size-largest);
+  font-weight: var(--font-weight-thin);;
+  color: var(--primary-tint);
+}
+
+section p {
+  font-size: var(--font-size-medium);
+  margin: 0;
+}
+
+footer {
+  grid-area: footer;
+  position: relative;
+}
+
+footer h3 {
+  font-size: var(--font-size-larger);
+}
+
+shield {
+  --shield-color: var(--shield-color);
+}
+
+shield[type="html"] {
+  --shield-color: var(--shield-color-html);
+}
+
+shield[type="css"] {
+  --shield-color: var(--shield-color-css);
+}
+
+shield[type="js"] {
+  --shield-color: var(--shield-color-js);
+}
+
+credits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+  position: absolute;
+  right: calc(var(--spacing-large) * -2.25);
+  bottom: var(--spacing-small);
+}
+
+credits h1, credits h2 {
+  font-size: var(--font-size-large);
+  margin: var(--spacing-small);
+}
+
+credits a {
+  text-decoration: none;
+}
+
+credits h1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--spacing-medium);
+  border: solid var(--spacing-smallest) var(--primary-tint);
+  border-radius: var(--spacing-largest);
+  font-size: var(--font-size-medium);
+  font-weight: 400;
+  width: 100px;
+  padding-inline: var(--spacing-medium);
+  padding-block: var(--spacing-small);
+  color: var(--color-white);
+  overflow: hidden;
+  background: var(--primary-tint);
+  outline: rgba(255, 255, 255, 0.5) var(--spacing-smaller) solid;
+  position: relative;
+}
+
+credits svg {
+  fill: var(--color-white)
+}
+
+credits h2 {
+  font-size: var(--font-size-medium);
+  color: var(--color-black);
+}
