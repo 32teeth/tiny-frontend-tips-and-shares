@@ -1,0 +1,41 @@
+@property --integer {
+  syntax: "<integer>";
+  inherits: false;
+  initial-value: 'pew pew';
+}
+
+article {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--spacing-large);
+  border: var(--border-dotted) var(--primary-tint) var(--border-width);
+  border-radius: var(--spacing-small);
+  padding: var(--spacing-small);
+}
+
+counter {
+  display: flex;
+  justify-content: center;
+  counter-set: integer var(--integer);
+  transition: --integer 750ms;
+  width: var(--spacing-largest);
+}
+
+counter::before {
+  content: counter(integer);
+  font-size: var(--font-size-largest);
+  color: var(--primary-tint);
+}
+
+button {
+  font-size: var(--font-size-larger);
+  color: var(--color-white);
+  background: none;
+  background-color: var(--primary-tint);
+  width: var(--spacing-large);
+  border-radius: var(--spacing-small);
+  font-weight: var(--font-weight-bold);
+  border: none;
+  cursor: pointer;
+}

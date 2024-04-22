@@ -85,6 +85,11 @@ h2 {
   font-size: var(--font-size-larger);
 }
 
+a {
+  color: var(--primary-tint);
+  text-decoration: none;
+}
+
 strong {
   font-weight: var(--font-weight-medium);
 }

@@ -1,0 +1,14 @@
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+select, input {
+  width: 100%;
+  padding: var(--spacing-small);
+  border-radius: var(--spacing-small);
+  border: var(--border-dotted) var(--primary-tint) var(--border-width);
+  color: var(--primary-tint);
+}

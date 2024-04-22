@@ -8,4 +8,8 @@ export const fragment = (page, node) => {
       node.innerHTML = text;
     });
   });
+
+  if(page === 'integer') {
+    import('./integer.js')
+  }
 }
