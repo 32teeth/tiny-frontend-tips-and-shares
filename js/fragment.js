@@ -12,4 +12,8 @@ export const fragment = (page, node) => {
   if(page === 'integer') {
     import('./integer.js')
   }
+
+  if(page === 'dialog') {
+    import('./dialog.js')
+  }
 }

@@ -1,0 +1,43 @@
+button {
+  border: var(--border-dotted) var(--primary-tint) var(--border-width);
+  border-radius: var(--spacing-small);
+  padding-block: var(--spacing-medium);
+  padding-inline: var(--spacing-medium);
+  color: var(--primary-tint);
+  cursor: pointer;
+  background: var(--color-white);
+  /*
+  background: url("data:image/svg+xml;base64,Cgo8c3ZnIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5LjMgNS43MTAwMkMxOC44NDEgNS4yNDYwMSAxOC4yOTQzIDQuODc3OTcgMTcuNjkxNyA0LjYyNzMxQzE3LjA4OTEgNC4zNzY2NiAxNi40NDI2IDQuMjQ4NCAxNS43OSA0LjI1MDAyQzE1LjEzNzMgNC4yNDg0IDE0LjQ5MDkgNC4zNzY2NiAxMy44ODgzIDQuNjI3MzFDMTMuMjg1NyA0Ljg3Nzk3IDEyLjczOSA1LjI0NjAxIDEyLjI4IDUuNzEwMDJMMTIgNi4wMDAwMkwxMS43MiA1LjcyMDAxQzEwLjc5MTcgNC43OTE4MiA5LjUzMjczIDQuMjcwMzcgOC4yMiA0LjI3MDM3QzYuOTA3MjYgNC4yNzAzNyA1LjY0ODI5IDQuNzkxODIgNC43MiA1LjcyMDAxQzMuODAzODYgNi42NTQ2NiAzLjI5MDcxIDcuOTExMjUgMy4yOTA3MSA5LjIyMDAyQzMuMjkwNzEgMTAuNTI4OCAzLjgwMzg2IDExLjc4NTQgNC43MiAxMi43MkwxMS40OSAxOS41MUMxMS42MzA2IDE5LjY1MDUgMTEuODIxMiAxOS43Mjk0IDEyLjAyIDE5LjcyOTRDMTIuMjE4NyAxOS43Mjk0IDEyLjQwOTQgMTkuNjUwNSAxMi41NSAxOS41MUwxOS4zMiAxMi43MkMyMC4yMzY1IDExLjc4MjMgMjAuNzQ3OSAxMC41MjIxIDIwLjc0NDIgOS4yMTA5MkMyMC43NDA1IDcuODk5NzMgMjAuMjIxOCA2LjY0MjQ4IDE5LjMgNS43MTAwMloiIGZpbGw9IiMwMDAwMDAwMCIgc3Ryb2tlPSJoc2woMjE2LCA4OSUsIDQ5JSkiLz4KPC9zdmc+");
+  background-repeat: no-repeat;
+  background-position: var(--spacing-smaller) center;
+  */
+}
+
+dialog {
+  position: fixed;
+  top: calc(100% -( var(--aside-width) / 1.25) - var(--spacing-large) * 2);
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - var(--spacing-large) * 2);
+  height: calc(var(--aside-width) / 1);
+  border: none;
+  padding-inline: var(--spacing-large);
+  padding-block: var(--spacing-smallest);
+  transition: all 500ms;
+  transform: translateY(var(--aside-width));
+  z-index: 99999;
+}
+
+dialog[open] {
+  transform: translateY(0);
+}
+
+dialog header {
+  display: flex;
+  flex-direction: row;;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+  padding-block: var(--spacing-large);
+}

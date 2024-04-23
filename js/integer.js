@@ -1,7 +1,6 @@
 
 setTimeout(() => {
   const counter = document.querySelector('counter');
-  console.log(counter);
   document.querySelectorAll('button').forEach(button => {
     button.addEventListener('click', async function () {
       let integer = counter.getAttribute('style')
