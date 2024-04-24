@@ -6,5 +6,4 @@ setTimeout(() => {
       dialog.open ? dialog.close('bye') : dialog.showModal();
     });
   });
-  document.querySelector('dialog').showModal();
 }, 100);

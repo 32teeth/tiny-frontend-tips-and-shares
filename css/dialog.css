@@ -15,16 +15,16 @@ button {
 
 dialog {
   position: fixed;
-  top: calc(100% -( var(--aside-width) / 1.25) - var(--spacing-large) * 2);
+  top: calc(100% -( var(--aside-width) * 2) - var(--spacing-large) * 2);
   display: flex;
   flex-direction: column;
   width: calc(100% - var(--spacing-large) * 2);
-  height: calc(var(--aside-width) / 1);
+  height: calc(var(--aside-width) * 2);
   border: none;
   padding-inline: var(--spacing-large);
   padding-block: var(--spacing-smallest);
   transition: all 500ms;
-  transform: translateY(var(--aside-width));
+  transform: translateY(calc(var(--aside-width) * 2));
   z-index: 99999;
 }
 
@@ -40,4 +40,45 @@ dialog header {
   width: 100%;
   height: max-content;
   padding-block: var(--spacing-large);
+}
+
+dialog header button {
+  border: none;
+  background: none;
+}
+
+dialog section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+  justify-content: space-around;
+  height: 100%;
+  background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1032b378-9e4c-4e5b-9344-03d0fafe3154/dem24ti-fc94d6a2-3be7-4886-b216-ef717977add3.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzEwMzJiMzc4LTllNGMtNGU1Yi05MzQ0LTAzZDBmYWZlMzE1NFwvZGVtMjR0aS1mYzk0ZDZhMi0zYmU3LTQ4ODYtYjIxNi1lZjcxNzk3N2FkZDMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.NEsCAY9qw0LAtiT4ocmEOlMa1T-Ds0wY0uB924vn1_0);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 30% 0%;
+}
+
+dialog buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: var(--spacing-medium);
+}
+
+dialog buttons button {
+  border: var(--color-white) var(--border-width) var(--border-dotted);
+  background: none;
+  padding-block: var(--spacing-medium);
+  padding-inline: var(--spacing-larger);
+  color: var(--color-white);
+  cursor: pointer;
+  background: var(--primary-tint);
+  border-radius: var(--spacing-small);
+}
+
+dialog buttons button:first-child {
+  background: var(--color-white);
+  color: var(--primary-tint);
+  border-color: var(--primary-tint);
 }
