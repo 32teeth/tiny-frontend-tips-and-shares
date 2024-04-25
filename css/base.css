@@ -15,8 +15,8 @@
   --color-gray-300: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 30%);
   --color-gray-200: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 35%);
   --color-gray-100: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 40%);
-  --color-gray-50: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 45%);
-  --color-gray-0: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 80%);
+  --color-gray-50: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 75%);
+  --color-gray-0: color-mix(in hsl, hsl(0, 0%, 50%), hsl(0, 0%, 100%) 90%);
   --color-blue: hsl(216, 89%, 49%);
   --color-purple: hsl(260, 81%, 65%);
   --color-pink: hsl(309, 72%, 64%);
