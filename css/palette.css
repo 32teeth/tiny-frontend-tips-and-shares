@@ -1,0 +1,71 @@
+:root {
+  --chip-width: calc(240 / 16 * 1em);
+  --chip-height: calc(var(--chip-width) * 2/3);
+  --chip-border: calc(0 / 16 * 1em);
+  --chip-shadow: calc(0 / 16 * 1em);
+  --chip-filet: calc(4 / 16 * 1em);
+  --chip-gap: calc(32 / 16 * 1em);
+  --padding: calc(24 / 16 * 1em);
+}
+
+body {
+  width: calc(100vw - 2 * var(--padding));
+  height: 100vh;
+  margin: 0;
+  padding: var(--padding);
+  font-family: "Comfortaa";
+}
+
+palette-chip {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: baseline;
+  outline: solid calc(1 / 16 * 1rem) rgba(0, 0, 0, 0.05);
+  outline-offset: calc(var(--chip-filet) * 2);
+  width: var(--chip-width);
+}
+
+input[type='color'] {
+  width: 100%;
+  height: calc(var(--chip-height)/2);
+  border: none;
+  background: none;
+  outline: none;
+  position: relative;
+  -webkit-appearance: none;
+  margin-bottom: var(--chip-gap);
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  box-shadow: inset var(--chip-border) var(--chip-border) var(--chip-filet) rgba(0, 0, 0, 0.1);
+}
+
+li {
+  list-style: none;
+  font-size: calc(12 / 16 * 1em);
+  line-height: 1.5;
+  display: flex;
+  width: calc(100% - 2 * var(--chip-filet));
+  padding-inline: calc(4 / 16 * 1em);
+  justify-content: space-between;
+}
+
+li:last-child {
+  justify-content: center;
+  margin-top: var(--chip-gap);
+  background: var(--color);
+  padding-block: calc(8 / 16 * 1em);
+}
+
+li:last-child span {
+  color: var(--color);
+  /*color: hsl(from var(--color) 0 0 100);*/
+  -webkit-filter:invert(100%) contrast(999) grayscale(100%);
+  filter:invert(100%) contrast(999) grayscale(100%);
+}
