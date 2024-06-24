@@ -13,4 +13,10 @@ export const fragment = (page, node) => {
   });
 
   import(`./${page}.js`).catch(() => {});
+
+  const menu =  document.querySelector('menu select');
+  if (menu) {
+    menu.value = page;
+  }
+
 }

@@ -7,6 +7,4 @@ document.addEventListener('DOMContentLoaded', async function () {
   }
   const page = `${node.getAttribute('data-fragment')}`;
   fragment(page, node);
-
-
 });

@@ -124,6 +124,11 @@ main {
 aside {
   grid-area: aside;
   width: var(--aside-width);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   background: url(https://raw.githubusercontent.com/32teeth/tiny-frontend-tips-and-shares/main/32teeth.png), var(--primary-tint);
   background-size: cover;
   background-blend-mode: luminosity;
@@ -139,7 +144,12 @@ footer {
 
 header {
   grid-area: header;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "h1 menu"
+    "h2 menu";
   text-overflow: ellipsis;
   width: 100%;
   height: var(--header-height);
@@ -148,17 +158,52 @@ header {
   align-items: flex-start;
 }
 
+header h1 {
+  grid-area: h1;
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+}
+
+header h2 {
+  grid-area: h2;
+}
+
+header menu {
+  grid-area: menu;
+  display: flex;
+  height: 100%;
+  gap: var(--spacing-medium);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+header menu select {
+  margin-inline: var(--spacing-medium);
+}
+
 content {
   grid-area: content;
   gap: var(--spacing-larger);
   padding-right: var(--spacing-larger);
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 section {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-medium);
-  width: 100%
+  width: 100%;
+  opacity: 0;
+  animation: fadein 1s forwards;
 }
 
 section h2 {
@@ -246,4 +291,11 @@ credits svg {
 credits h2 {
   font-size: var(--font-size-medium);
   color: var(--color-black);
+}
+
+select {
+  padding: var(--spacing-small);
+  border-radius: var(--spacing-small);
+  border: var(--border-dotted) var(--primary-tint) var(--border-width);
+  color: var(--primary-tint);
 }

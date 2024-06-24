@@ -8,14 +8,6 @@
   --padding: calc(24 / 16 * 1em);
 }
 
-body {
-  width: calc(100vw - 2 * var(--padding));
-  height: 100vh;
-  margin: 0;
-  padding: var(--padding);
-  font-family: "Comfortaa";
-}
-
 palette-chip {
   display: flex;
   flex-direction: column;
