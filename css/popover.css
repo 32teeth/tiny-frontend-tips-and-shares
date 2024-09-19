@@ -21,7 +21,7 @@ button {
   padding-block: var(--spacing-large);
   padding-inline: var(--spacing-large);
   transform: translateY(0);
-  opcaity: 1;
+  opacity: 1;
   box-shadow: var(--spacing-smallest) var(--spacing-smallest) var(--spacing-small) rgba(0,0,0,0.1);
   animation: popover 250ms ease;
 }
